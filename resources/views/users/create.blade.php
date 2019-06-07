@@ -16,7 +16,7 @@
     <div class="form-group">
         <label for="inputPwd">密码:</label>
         <input type="password" class="form-control" id="inputPwd" name="password" placeholder="密码"
-            value="{{ old('password') }} "> }}
+            value="{{ old('password') }}" />
     </div>
     <div class="form-group">
         <label for="inputPwdConfirm">确认密码:</label>

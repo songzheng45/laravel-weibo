@@ -18,9 +18,9 @@
 
 Route::get('/', 'StaticPagesController@home')->name("home");
 
+Route::get('/login', 'SessionController@create')->name('login');
+Route::post('/login', 'SessionController@store')->name('signin');
+Route::delete('/logout', 'SessionController@destroy')->name('logout');
+
 // 用户管理:增删改查
 Route::resource('user', 'UserController');
-
-// 登录、注销
-// Route::get('login', 'SessionController@create')->name('login');
-Route::get('logout', 'SessionController@destroy')->name('logout');
