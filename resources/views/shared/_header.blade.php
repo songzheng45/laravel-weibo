@@ -1,21 +1,31 @@
-<div class="header clearfix">
-    <nav>
-        <div class="btn-group nav nav-pills float-right">
-            <button type="button" class="btn">首页</button>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+    <a class="navbar-brand" href="#">微博</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">首页 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="#">帮助 <span class="sr-only">(current)</span></a>
+            </li>
             @if(Auth::check())
-            <div class="btn-group">
-                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
-                    个人中心
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">编辑资料</a>
-                    <a class="dropdown-item" href="#">退出</a>
+            <div class="dropdown show">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown link
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
                 </div>
             </div>
             @else
-            <button type="button" class="btn">登录</button>
+            <li class="nav-item">
+                <a class="nav-link" href="#">登录</a>
+            </li>
             @endif
-        </div>
-    </nav>
-    <h3 class="text-muted">微博</h3>
-</div>
+        </ul>
+    </div>
+</nav>
